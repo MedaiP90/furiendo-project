@@ -2,11 +2,11 @@
   "name": "furiendo-project",
   "version": "1.0.0",
   "description": "Backend for the フリエンド Project",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "LISTENING_PORT=8080 nodemon index.js",
-    "start": "node index.js"
+    "dev": "LISTENING_PORT=8080 nodemon app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
