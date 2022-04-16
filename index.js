@@ -4,7 +4,7 @@ const fakeDb = require('./tools/fake-db');
 
 /* Configure variables */
 
-const port = process.env.LISTENING_PORT || 8080;
+const port = process.env.LISTENING_PORT || 80;
 
 /* Configure Express */
 
