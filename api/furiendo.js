@@ -59,8 +59,13 @@ module.exports = {
         return;
       }
 
-      fakeDb.addOrders(query, orders);
-      res.status(200).end();
+      const error = fakeDb.addOrders(query, orders);
+
+      if (error == undefined) {
+        res.status(200).end();
+      } else {
+        res.status(404).send(error).end();
+      }
     });
   }
 };

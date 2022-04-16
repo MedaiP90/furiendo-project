@@ -10,6 +10,8 @@ module.exports = {
   },
 
   addOrders: function(menuId, orders) {
+    if (menus[menuId] == undefined) return `${menuId} does not exist`;
+  
     orders.forEach((order) => {
       const newOrder = { order, count: 1 };
       let found = false;
@@ -27,6 +29,8 @@ module.exports = {
         menus[menuId].push(newOrder);
       }
     });
+
+    return undefined;
   },
 
   getMenu(menuId) {
