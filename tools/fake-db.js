@@ -34,6 +34,15 @@ module.exports = {
   },
 
   getMenu(menuId) {
-    return menus[menuId];
+    const finalMenu = menus[menuId];
+
+    finalMenu.sort((o1, o2) => {
+      const order1 = o1.order.toUpperCase();
+      const order2 = o2.order.toUpperCase();
+
+      return order1 - order2;
+    });
+
+    return finalMenu;
   }
 };
