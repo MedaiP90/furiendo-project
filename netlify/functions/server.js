@@ -13,10 +13,10 @@ app.use(express.json({ limit: '15mb', extended: true }));
 /* Configure routing */
 
 // Default ping response
-router.get('/api/ping', (_req, res) => { res.send('pong'); });
+router.get('/ping', (_req, res) => { res.send('pong'); });
 
 // Add api responders
-apiFuriendo.add(router, fakeDb, '/api');
+apiFuriendo.add(router, fakeDb, '/');
 
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 
